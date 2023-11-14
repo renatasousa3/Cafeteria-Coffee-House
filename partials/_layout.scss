@@ -1,0 +1,240 @@
+.container{
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 8px;
+}
+.bg-home{
+    position: relative;
+}
+.bg-home::before{
+    content: '';
+    display: block;
+    position: absolute;
+    background-image: linear-gradient(to bottom,rgba(6, 10, 30,0.1), #06121e), url(imagens/pexels-afta-putta-gunawan-683039.jpg);
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 0%;
+    opacity: 0.9;
+}
+.hero{
+    color: $white-normal;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 14px;
+
+    h1{
+        text-align: center;
+        line-height: 150%;
+        max-width: 940px;
+        font-size: 46px;
+    }
+    p{
+        text-align: center;
+        margin: 14px 0;
+    }
+
+}
+.menu-button{
+    padding: 14px 28px;
+    color: $white-normal;
+    background-color: $creme-normal;
+    border: 0;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 14px 0;
+}
+.menu-button:hover{
+    animation: scaleButton 0.8s alternate infinite;
+}
+@keyframes scaleButton {
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.07);
+    }
+}
+
+@media screen and (max-width: 768px){
+    .hero{
+        min-height: 60vh;
+        h1{
+            font-size: 34px;
+            padding: 0 14px;
+            width: 100%;
+        }
+        p{
+         font-size: 14px;
+        }
+    }
+}
+    
+@media screen and (max-width: 480px){
+    .hero h1{
+        font-size: 24px;
+    }
+}
+
+.about{
+     background-color: $primary-normal;
+     overflow: hidden;
+     color: $white-normal;
+}
+.about-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    padding: 34px 14px 64px 14px;
+
+    img{
+        
+        max-width: 570px;
+    }
+}
+.about-content div{
+    flex:1
+}
+.about-description{
+    h2{
+        font-size: 38px;
+        margin-bottom: 24px;
+    }
+    p{
+        margin-bottom: 14px;
+        line-height: 150%;
+    }
+}
+
+ @media screen and (max-width: 768px){
+    .about-content{
+        flex-direction: column;
+    }
+ }
+
+ .menu{
+    background-color: $white-normal;
+    color: $black-normal;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 54px 14px;
+    
+ }
+
+ .menu-content h2{
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 38px;
+    margin-bottom: 14px;
+ }
+
+.menu-content p{
+    line-height: 150%;
+    text-align: center;
+    margin-bottom: 14px;
+    max-width: 780px;
+}
+
+.cafes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    padding: 0 44px 34px 44px;
+    
+}
+.cafe{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: $white-normal;
+    border-radius: 8px;
+    box-shadow: 0px -1px 17px -4px rgb(0,0,0, 0.5);
+
+    overflow: hidden;
+
+    img{
+        width: 100%;
+        height: auto;
+        transition: transform 0.2s;
+    }
+}
+.cafe img:hover{
+    transform: scale(1.2);
+    z-index: 1;
+}
+.cafes-info{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 14px;
+    background-color: $white-normal;
+    z-index: 99;
+
+    strong{
+        text-align: left;
+    }
+}
+.cafes-info button{
+    color: $white-normal;
+    background-color: $creme-light;
+    padding: 3px 6px;
+    border-radius: 4px;
+    border: 0;
+    cursor: default;
+}
+@media screen and (max-width: 540px){
+    .cafes{
+        flex-direction: column;
+    }
+    .cafe img{
+        max-width: 600px;
+
+    }
+}
+@media screen and (max-width: 768px){
+    .cafes{
+        flex-direction: column;
+    }
+    .cafe img{
+        max-width: 740px;
+
+    }
+}
+@media screen and (max-width: 1200px){
+    .cafe img{
+        max-width: 1100px;
+
+    }
+}
+@media screen and (max-width: 1920px){
+    .cafe img{
+        max-width: 1024px;
+    }
+}
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 54px 0;
+    gap: 24px;
+    color: $white-normal;
+}
+.footer-icons{
+    display: flex;
+    gap: 8px;
+    color: $white-normal;
+    
+}
+
